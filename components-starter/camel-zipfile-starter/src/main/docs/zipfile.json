@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "camel.dataformat.zip-file",
+      "type": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.zip-file.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.dataformat.zip-file.allow-empty-directory",
+      "type": "java.lang.Boolean",
+      "description": "If the zip file has more than one entry, setting this option to true, allows to get the iterator even if the directory is empty.",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.zip-file.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.zip-file.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the zipFile data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.zip-file.max-decompressed-size",
+      "type": "java.lang.Long",
+      "description": "Set the maximum decompressed size of a zip file (in bytes). The default value if not specified corresponds to 1 gigabyte. Set to -1 to disable setting a maximum decompressed size.",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "defaultValue": 1073741824
+    },
+    {
+      "name": "camel.dataformat.zip-file.preserve-path-elements",
+      "type": "java.lang.Boolean",
+      "description": "If the file name contains path elements, setting this option to true, allows the path to be maintained in the zip file.",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.zip-file.using-iterator",
+      "type": "java.lang.Boolean",
+      "description": "If the zip file has more than one entry, the setting this option to true, allows working with the splitter EIP, to split the data using an iterator in a streaming mode.",
+      "sourceType": "org.apache.camel.dataformat.zipfile.springboot.ZipFileDataFormatConfiguration",
+      "defaultValue": false
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

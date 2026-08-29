@@ -1,0 +1,243 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.crypto",
+      "type": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.dataformat.crypto",
+      "type": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.crypto.algorithm",
+      "type": "java.lang.String",
+      "description": "Sets the JCE name of the Algorithm that should be used for the signer.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "defaultValue": "SHA256withRSA"
+    },
+    {
+      "name": "camel.component.crypto.alias",
+      "type": "java.lang.String",
+      "description": "Sets the alias used to query the KeyStore for keys and {link java.security.cert.Certificate Certificates} to be used in signing and verifying exchanges. This value can be provided at runtime via the message header org.apache.camel.component.crypto.DigitalSignatureConstants#KEYSTORE_ALIAS",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.crypto.buffer-size",
+      "type": "java.lang.Integer",
+      "description": "Set the size of the buffer used to read in the Exchange payload data.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "defaultValue": 2048
+    },
+    {
+      "name": "camel.component.crypto.certificate",
+      "type": "java.security.cert.Certificate",
+      "description": "Set the Certificate that should be used to verify the signature in the exchange based on its payload. The option is a java.security.cert.Certificate type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.certificate-name",
+      "type": "java.lang.String",
+      "description": "Sets the reference name for a PrivateKey that can be found in the registry.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.clear-headers",
+      "type": "java.lang.Boolean",
+      "description": "Determines if the Signature specific headers be cleared after signing and verification. Defaults to true, and should only be made otherwise at your extreme peril as vital private information such as Keys and passwords may escape if unset.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.crypto.configuration",
+      "type": "org.apache.camel.component.crypto.DigitalSignatureConfiguration",
+      "description": "To use the shared DigitalSignatureConfiguration as configuration. The option is a org.apache.camel.component.crypto.DigitalSignatureConfiguration type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.crypto.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the crypto component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.key-store-parameters",
+      "type": "org.apache.camel.support.jsse.KeyStoreParameters",
+      "description": "Sets the KeyStore that can contain keys and Certficates for use in signing and verifying exchanges based on the given KeyStoreParameters. A KeyStore is typically used with an alias, either one supplied in the Route definition or dynamically via the message header CamelSignatureKeyStoreAlias. If no alias is supplied and there is only a single entry in the Keystore, then this single entry will be used. The option is a org.apache.camel.support.jsse.KeyStoreParameters type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.keystore",
+      "type": "java.security.KeyStore",
+      "description": "Sets the KeyStore that can contain keys and Certficates for use in signing and verifying exchanges. A KeyStore is typically used with an alias, either one supplied in the Route definition or dynamically via the message header CamelSignatureKeyStoreAlias. If no alias is supplied and there is only a single entry in the Keystore, then this single entry will be used. The option is a java.security.KeyStore type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.keystore-name",
+      "type": "java.lang.String",
+      "description": "Sets the reference name for a Keystore that can be found in the registry.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.crypto.password",
+      "type": "java.lang.String",
+      "description": "Sets the password used to access an aliased PrivateKey in the KeyStore.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.private-key",
+      "type": "java.security.PrivateKey",
+      "description": "Set the PrivateKey that should be used to sign the exchange. The option is a java.security.PrivateKey type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.private-key-name",
+      "type": "java.lang.String",
+      "description": "Sets the reference name for a PrivateKey that can be found in the registry.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.provider",
+      "type": "java.lang.String",
+      "description": "Set the id of the security provider that provides the configured Signature algorithm.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.public-key",
+      "type": "java.security.PublicKey",
+      "description": "Set the PublicKey that should be used to verify the signature in the exchange. The option is a java.security.PublicKey type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.public-key-name",
+      "type": "java.lang.String",
+      "description": "references that should be resolved when the context changes",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.secure-random",
+      "type": "java.security.SecureRandom",
+      "description": "Set the SecureRandom used to initialize the Signature service. The option is a java.security.SecureRandom type.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.secure-random-name",
+      "type": "java.lang.String",
+      "description": "Sets the reference name for a SecureRandom that can be found in the registry.",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.component.crypto.signature-header-name",
+      "type": "java.lang.String",
+      "description": "Set the name of the message header that should be used to store the base64 encoded signature. This defaults to 'CamelDigitalSignature'",
+      "sourceType": "org.apache.camel.component.crypto.springboot.DigitalSignatureComponentConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.algorithm",
+      "type": "java.lang.String",
+      "description": "The JCE algorithm name indicating the cryptographic algorithm that will be used.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.algorithm-parameter-spec",
+      "type": "java.lang.String",
+      "description": "A JCE AlgorithmParameterSpec used to initialize the Cipher. The option is a java.security.spec.AlgorithmParameterSpec type.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.buffer-size",
+      "type": "java.lang.Integer",
+      "description": "The size of the buffer used in the signature process.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "defaultValue": 4096
+    },
+    {
+      "name": "camel.dataformat.crypto.crypto-provider",
+      "type": "java.lang.String",
+      "description": "The name of the JCE Security Provider that should be used.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.crypto.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the crypto data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.init-vector",
+      "type": "java.lang.Byte[]",
+      "description": "Refers to a byte array containing the Initialization Vector that will be used to initialize the Cipher.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.inline",
+      "type": "java.lang.Boolean",
+      "description": "Flag indicating that the configured IV should be inlined into the encrypted data stream. Is by default false.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.crypto.key",
+      "type": "java.lang.String",
+      "description": "Refers to the secret key to lookup from the register to use. The option is a java.security.Key type.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.crypto.mac-algorithm",
+      "type": "java.lang.String",
+      "description": "The JCE algorithm name indicating the Message Authentication algorithm.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "defaultValue": "HmacSHA1"
+    },
+    {
+      "name": "camel.dataformat.crypto.should-append-h-m-a-c",
+      "type": "java.lang.Boolean",
+      "description": "Flag indicating that a Message Authentication Code should be calculated and appended to the encrypted data.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.CryptoDataFormatConfiguration",
+      "defaultValue": true
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

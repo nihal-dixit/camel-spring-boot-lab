@@ -1,0 +1,29 @@
+# Apache Camel Spring Boot Support
+
+[![Maven Central](https://img.shields.io/maven-central/v/org.apache.camel/apache-camel.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/org.apache.camel/apache-camel)
+[![Javadocs](http://www.javadoc.io/badge/org.apache.camel/apache-camel.svg?color=brightgreen)](https://www.javadoc.io/doc/org.apache.camel/camel-core)
+[![Stack Overflow](https://img.shields.io/:stack%20overflow-apache--camel-brightgreen.svg)](https://stackoverflow.com/questions/tagged/apache-camel)
+[![Chat](https://img.shields.io/badge/zulip-join_chat-brightgreen.svg)](https://camel.zulipchat.com/)
+[![Twitter](https://img.shields.io/twitter/follow/ApacheCamel.svg?label=Follow&style=social)](https://twitter.com/ApacheCamel)
+ 
+
+[Apache Camel](https://camel.apache.org/) is a powerful open source integration framework based on known
+Enterprise Integration Patterns with powerful bean integration.
+
+### Introduction
+
+This project provides Spring Boot support for Apache Camel.
+
+## Creating / deleting starters
+
+To create a starter for the `zoot` component, run the following command:
+```
+./starter-create zoot
+```
+
+Similarly, to delete the starter for the `zoot` component, run the following command:
+```
+./starter-delete zoot
+```
+
+More information can be found on the [Camel website](https://camel.apache.org/camel-spring-boot/latest/)

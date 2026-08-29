@@ -1,0 +1,290 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.pqc",
+      "type": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.dataformat.pqc",
+      "type": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pqc.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.pqc.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.pqc.classical-k-e-m-algorithm",
+      "type": "java.lang.String",
+      "description": "The classical key agreement algorithm to use in hybrid KEM operations",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.classical-key-agreement",
+      "type": "javax.crypto.KeyAgreement",
+      "description": "The classical KeyAgreement instance to be used in hybrid KEM operations. The option is a javax.crypto.KeyAgreement type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.classical-key-pair",
+      "type": "java.security.KeyPair",
+      "description": "The classical KeyPair to be used in hybrid operations. The option is a java.security.KeyPair type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.classical-signature-algorithm",
+      "type": "java.lang.String",
+      "description": "The classical signature algorithm to use in hybrid operations",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.classical-signer",
+      "type": "java.security.Signature",
+      "description": "The classical Signature instance to be used in hybrid signature operations. The option is a java.security.Signature type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.configuration",
+      "type": "org.apache.camel.component.pqc.PQCConfiguration",
+      "description": "Component configuration. The option is a org.apache.camel.component.pqc.PQCConfiguration type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.pqc.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the pqc component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.health-check-consumer-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Used for enabling or disabling all consumer based health checks from this component",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.pqc.health-check-producer-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Used for enabling or disabling all producer based health checks from this component. Notice: Camel has by default disabled all producer based health-checks. You can turn on producer checks globally by setting camel.health.producersEnabled=true.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.pqc.hybrid-kdf-algorithm",
+      "type": "java.lang.String",
+      "description": "The KDF algorithm to use for combining secrets in hybrid KEM operations",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": "HKDF-SHA256"
+    },
+    {
+      "name": "camel.component.pqc.key-encapsulation-algorithm",
+      "type": "java.lang.String",
+      "description": "In case there is no keyGenerator, we specify an algorithm to build the KeyGenerator",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-generator",
+      "type": "javax.crypto.KeyGenerator",
+      "description": "The Key Generator to be used in encapsulation and extraction. The option is a javax.crypto.KeyGenerator type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-lifecycle-manager",
+      "type": "org.apache.camel.component.pqc.lifecycle.KeyLifecycleManager",
+      "description": "The KeyLifecycleManager to use for key lifecycle operations such as generation, rotation, import\/export, expiration, and revocation. The option is a org.apache.camel.component.pqc.lifecycle.KeyLifecycleManager type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-pair",
+      "type": "java.security.KeyPair",
+      "description": "The KeyPair to be used. The option is a java.security.KeyPair type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-pair-alias",
+      "type": "java.lang.String",
+      "description": "A KeyPair alias to use in combination with KeyStore parameter",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-rotation-check-interval",
+      "type": "java.lang.Long",
+      "description": "Interval between key rotation checks when the scheduler is enabled. The option is a long type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": 3600000
+    },
+    {
+      "name": "camel.component.pqc.key-rotation-max-age",
+      "type": "java.lang.Long",
+      "description": "When the scheduler is enabled, rotate keys older than this age. If not set, age is not used as a rotation signal. The option is a long type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-rotation-max-usage",
+      "type": "java.lang.Long",
+      "description": "When the scheduler is enabled, rotate keys whose recorded usage count reaches this value. 0 disables usage-based rotation.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": 0
+    },
+    {
+      "name": "camel.component.pqc.key-rotation-scheduler-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to start an automated background key rotation scheduler for this component. Requires keyLifecycleManager to be set. The scheduler periodically rotates keys that exceed the configured age and\/or usage policy.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.pqc.key-store",
+      "type": "java.security.KeyStore",
+      "description": "A KeyStore where we could get Cryptographic material. The option is a java.security.KeyStore type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.key-store-password",
+      "type": "java.lang.String",
+      "description": "The KeyStore password to use in combination with KeyStore Parameter",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.pqc.operation",
+      "type": "org.apache.camel.component.pqc.PQCOperations",
+      "description": "The operation to perform",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.parameter-spec",
+      "type": "java.lang.String",
+      "description": "The NIST parameter set (security level) to use for the configured signature or key encapsulation algorithm, using the BouncyCastle parameter-set names: for example ML-DSA-44, ML-DSA-65 or ML-DSA-87 for MLDSA, and ML-KEM-512, ML-KEM-768 or ML-KEM-1024 for MLKEM. Names are case-insensitive and the underscore form (ml_dsa_87) is accepted as an alias. When set, the key material is generated with this parameter set instead of the algorithm default. Not supported for the stateful signature algorithms (XMSS, XMSSMT, LMS, HSS), for MAYO and SNOVA, nor for the hybrid operations: for those, register a KeyPair bean in the registry instead.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.signature-algorithm",
+      "type": "java.lang.String",
+      "description": "In case there is no signer, we specify an algorithm to build the KeyPair or the Signer",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.signer",
+      "type": "java.security.Signature",
+      "description": "The Signer to be used. The option is a java.security.Signature type.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.stateful-key-warning-threshold",
+      "type": "java.lang.Double",
+      "description": "The warning threshold for stateful key exhaustion as a fraction of total signatures (0.0 to 1.0). When the remaining signatures for a stateful key (XMSS, XMSSMT, LMS\/HSS) drop below this fraction of the total capacity, a WARN log is emitted. When remaining signatures reach zero, an exception is thrown to prevent key reuse. Set to 0 to disable warnings.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.store-extracted-secret-key-as-header",
+      "type": "java.lang.Boolean",
+      "description": "In the context of extractSecretKeyFromEncapsulation operation, this option define if we want to have the key set as header",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.pqc.strict-key-lifecycle",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enforce key status checks before cryptographic operations. When enabled, REVOKED keys are rejected for all operations, EXPIRED keys are rejected for signing\/encapsulation but allowed for verification\/extraction, and DEPRECATED keys produce a warning but still function. Requires a KeyLifecycleManager and a CamelPQCKeyId header to be set.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.pqc.symmetric-key-algorithm",
+      "type": "java.lang.String",
+      "description": "In case we are using KEM operations, we need a Symmetric algorithm to be defined for the flow to work.",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration"
+    },
+    {
+      "name": "camel.component.pqc.symmetric-key-length",
+      "type": "java.lang.Integer",
+      "description": "The required length of the symmetric key used",
+      "sourceType": "org.apache.camel.component.pqc.springboot.PQCComponentConfiguration",
+      "defaultValue": 128
+    },
+    {
+      "name": "camel.dataformat.pqc.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.pqc.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the pqc data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pqc.key-encapsulation-algorithm",
+      "type": "java.lang.String",
+      "description": "The Post-Quantum KEM algorithm to use for key encapsulation.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration",
+      "defaultValue": "MLKEM"
+    },
+    {
+      "name": "camel.dataformat.pqc.key-generator",
+      "type": "java.lang.String",
+      "description": "Refers to a custom KeyGenerator to lookup from the registry for KEM operations. The option is a javax.crypto.KeyGenerator type.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pqc.key-pair",
+      "type": "java.lang.String",
+      "description": "Refers to the KeyPair to lookup from the registry to use for KEM operations. The option is a java.security.KeyPair type.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pqc.provider",
+      "type": "java.lang.String",
+      "description": "The JCE security provider to use.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pqc.symmetric-key-algorithm",
+      "type": "java.lang.String",
+      "description": "The symmetric encryption algorithm to use with the shared secret. Only algorithms that support authenticated encryption (AEAD) are allowed: AES, ARIA, CAMELLIA, CAST6, DSTU7624, GOST3412_2015, SEED and SM4 are encrypted with GCM, and CHACHA7539 with ChaCha20-Poly1305.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration",
+      "defaultValue": "AES"
+    },
+    {
+      "name": "camel.dataformat.pqc.symmetric-key-length",
+      "type": "java.lang.Integer",
+      "description": "The length (in bits) of the symmetric key.",
+      "sourceType": "org.apache.camel.component.pqc.dataformat.springboot.PQCDataFormatConfiguration",
+      "defaultValue": 128
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "blocked",
+    "title": "Blocked Exchanges",
+    "description": "Display blocked exchanges",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.BlockedConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

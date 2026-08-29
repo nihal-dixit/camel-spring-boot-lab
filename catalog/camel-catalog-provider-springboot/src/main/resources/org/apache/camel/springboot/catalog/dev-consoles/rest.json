@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "rest",
+    "title": "Rest",
+    "description": "Rest DSL Registry information",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.RestDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

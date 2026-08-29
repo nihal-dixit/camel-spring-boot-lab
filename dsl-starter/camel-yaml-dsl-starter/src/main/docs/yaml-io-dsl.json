@@ -1,0 +1,15 @@
+{
+  "other": {
+    "kind": "other",
+    "name": "yaml-io-dsl",
+    "title": "YAML DSL",
+    "description": "Camel YAML DSL with camel-yaml-io",
+    "deprecated": false,
+    "firstVersion": "4.0.0",
+    "label": "dsl",
+    "supportLevel": "Stable",
+    "groupId": "org.apache.camel",
+    "artifactId": "camel-yaml-io-dsl",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}

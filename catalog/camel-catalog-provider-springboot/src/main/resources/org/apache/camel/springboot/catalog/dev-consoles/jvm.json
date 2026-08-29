@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "jvm",
+    "title": "JVM",
+    "description": "Displays JVM information",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.JvmDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

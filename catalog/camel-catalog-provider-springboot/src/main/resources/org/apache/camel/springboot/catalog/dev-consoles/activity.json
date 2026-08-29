@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "activity",
+    "title": "Camel Activity",
+    "description": "Recent completed exchange activity",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.ActivityDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

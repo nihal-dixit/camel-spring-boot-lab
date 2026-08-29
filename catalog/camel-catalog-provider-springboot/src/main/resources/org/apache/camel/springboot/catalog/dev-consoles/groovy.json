@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "groovy",
+    "title": "Groovy",
+    "description": "Groovy Language",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.language.groovy.GroovyDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-groovy-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

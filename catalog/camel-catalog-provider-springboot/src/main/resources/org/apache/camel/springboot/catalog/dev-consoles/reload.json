@@ -1,0 +1,48 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "reload",
+    "title": "Reload",
+    "description": "Console for reloading running Camel",
+    "deprecated": false,
+    "readOnly": false,
+    "javaType": "org.apache.camel.impl.console.ReloadDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  },
+  "options": {
+    "reload": {
+      "index": 0,
+      "kind": "option",
+      "displayName": "Reload",
+      "group": "query",
+      "label": "query",
+      "required": false,
+      "type": "boolean",
+      "javaType": "java.lang.Boolean",
+      "deprecated": false,
+      "autowired": false,
+      "secret": false,
+      "defaultValue": false,
+      "description": "Option to trigger reloading"
+    },
+    "wait": {
+      "index": 1,
+      "kind": "option",
+      "displayName": "Wait",
+      "group": "query",
+      "label": "query",
+      "required": false,
+      "type": "boolean",
+      "javaType": "java.lang.Boolean",
+      "deprecated": false,
+      "autowired": false,
+      "secret": false,
+      "defaultValue": false,
+      "description": "Option to wait for reloading to complete"
+    }
+  }
+}
+

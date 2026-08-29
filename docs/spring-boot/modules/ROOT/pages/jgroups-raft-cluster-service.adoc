@@ -1,0 +1,3 @@
+= Jgroups Raft Cluster Service
+
+This page has moved to xref:starters/jgroups-raft-cluster-service.adoc[Jgroups Raft Cluster Service].

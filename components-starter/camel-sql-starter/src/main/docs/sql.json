@@ -1,0 +1,143 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.sql",
+      "type": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql-stored",
+      "type": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql-stored.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.component.sql.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.sql-stored.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql-stored.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.sql-stored.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the sql-stored component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql-stored.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.sql-stored.service-location-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to detect the network address location of the database on startup. This information is gathered via reflection on the DataSource, and is vendor specific. This option can be used to turn this off.",
+      "sourceType": "org.apache.camel.component.sql.stored.springboot.SqlStoredComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.batch-auto-commit-disabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to optimize batch by turning off auto-commit which can dramatic improve performance, and instead execute as a manual commit after the entire batch operation is complete",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.bridge-error-handler",
+      "type": "java.lang.Boolean",
+      "description": "Allows for bridging the consumer to the Camel routing Error Handler, which mean any exceptions (if possible) occurred while the Camel consumer is trying to pickup incoming messages, or the likes, will now be processed as a message and handled by the routing Error Handler. Important: This is only possible if the 3rd party component allows Camel to be alerted if an exception was thrown. Some components handle this internally only, and therefore bridgeErrorHandler is not possible. In other situations we may improve the Camel component to hook into the 3rd party component and make this possible for future releases. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions, that will be logged at WARN or ERROR level and ignored.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.sql.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.sql.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the sql component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql.fetch-size",
+      "type": "java.lang.Integer",
+      "description": "Gives the JDBC driver a hint as to the number of rows that should be fetched from the database when more rows are needed for ResultSet objects generated by this Statement. If the value specified is zero, then the hint is ignored. The default value is zero. This is important for processing large result sets: Setting this higher than the default value will increase processing speed at the cost of memory consumption; setting this lower can avoid transferring row data that will never be read by the application.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql.health-check-consumer-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Used for enabling or disabling all consumer based health checks from this component",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.health-check-producer-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Used for enabling or disabling all producer based health checks from this component. Notice: Camel has by default disabled all producer based health-checks. You can turn on producer checks globally by setting camel.health.producersEnabled=true.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.sql.row-mapper-factory",
+      "type": "org.apache.camel.component.sql.RowMapperFactory",
+      "description": "Factory for creating RowMapper. The option is a org.apache.camel.component.sql.RowMapperFactory type.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration"
+    },
+    {
+      "name": "camel.component.sql.service-location-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to detect the network address location of the Database on startup. This information is gathered via reflection on the DataSource, and is vendor specific. This option can be used to turn this off.",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.sql.use-placeholder",
+      "type": "java.lang.Boolean",
+      "description": "Sets whether to use placeholder and replace all placeholder characters with sign in the SQL queries. This option is default true",
+      "sourceType": "org.apache.camel.component.sql.springboot.SqlComponentConfiguration",
+      "defaultValue": true
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

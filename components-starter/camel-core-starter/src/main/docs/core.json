@@ -1,0 +1,955 @@
+{
+  "groups": [
+    {
+      "name": "camel.cloud.consul.service-discovery",
+      "type": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery",
+      "type": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery",
+      "type": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.language.constant",
+      "type": "org.apache.camel.language.constant.springboot.ConstantLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.constant.springboot.ConstantLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.constant.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.constant.springboot.ConstantLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.exchange-property",
+      "type": "org.apache.camel.language.property.springboot.ExchangePropertyLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.property.springboot.ExchangePropertyLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.exchange-property.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.property.springboot.ExchangePropertyLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.file",
+      "type": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.file.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.header",
+      "type": "org.apache.camel.language.header.springboot.HeaderLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.header.springboot.HeaderLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.header.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.header.springboot.HeaderLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.ref",
+      "type": "org.apache.camel.language.ref.springboot.RefLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.ref.springboot.RefLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.ref.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.ref.springboot.RefLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.simple",
+      "type": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.simple.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.tokenize",
+      "type": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.tokenize.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.language.variable",
+      "type": "org.apache.camel.language.variable.springboot.VariableLanguageConfiguration",
+      "sourceType": "org.apache.camel.language.variable.springboot.VariableLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.variable.customizer",
+      "type": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.language.variable.springboot.VariableLanguageConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.resilience4j",
+      "type": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest",
+      "type": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.cloud.consul.service-discovery.acl-token",
+      "type": "java.lang.String",
+      "description": "Sets the ACL token to be used with Consul",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.block-seconds",
+      "type": "java.lang.Integer",
+      "description": "The seconds to wait for a watch event, default 10 seconds",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.configurations",
+      "type": "java.util.Map<java.lang.String,org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationCommon>",
+      "description": "Define additional configuration definitions",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.connect-timeout-millis",
+      "type": "java.lang.Long",
+      "description": "Connect timeout for OkHttpClient",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.datacenter",
+      "type": "java.lang.String",
+      "description": "The data center",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable the component",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.password",
+      "type": "java.lang.String",
+      "description": "Sets the password to be used for basic authentication",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Set client properties to use. These properties are specific to what service call implementation are in use. For example if using a different one, then the client properties are defined according to the specific service in use.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.read-timeout-millis",
+      "type": "java.lang.Long",
+      "description": "Read timeout for OkHttpClient",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.url",
+      "type": "java.lang.String",
+      "description": "The Consul agent URL",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.user-name",
+      "type": "java.lang.String",
+      "description": "Sets the username to be used for basic authentication",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.consul.service-discovery.write-timeout-millis",
+      "type": "java.lang.Long",
+      "description": "Write timeout for OkHttpClient",
+      "sourceType": "org.apache.camel.model.cloud.springboot.ConsulServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery.configurations",
+      "type": "java.util.Map<java.lang.String,org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationCommon>",
+      "description": "Define additional configuration definitions",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery.domain",
+      "type": "java.lang.String",
+      "description": "The domain name;",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable the component",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Set client properties to use. These properties are specific to what service call implementation are in use. For example if using a different one, then the client properties are defined according to the specific service in use.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.dns.service-discovery.proto",
+      "type": "java.lang.String",
+      "description": "The transport protocol of the desired service.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.DnsServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": "_tcp"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.api-version",
+      "type": "java.lang.String",
+      "description": "Sets the API version when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.ca-cert-data",
+      "type": "java.lang.String",
+      "description": "Sets the Certificate Authority data when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.ca-cert-file",
+      "type": "java.lang.String",
+      "description": "Sets the Certificate Authority data that are loaded from the file when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-cert-data",
+      "type": "java.lang.String",
+      "description": "Sets the Client Certificate data when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-cert-file",
+      "type": "java.lang.String",
+      "description": "Sets the Client Certificate data that are loaded from the file when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-key-algo",
+      "type": "java.lang.String",
+      "description": "Sets the Client Keystore algorithm, such as RSA when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-key-data",
+      "type": "java.lang.String",
+      "description": "Sets the Client Keystore data when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-key-file",
+      "type": "java.lang.String",
+      "description": "Sets the Client Keystore data that are loaded from the file when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.client-key-passphrase",
+      "type": "java.lang.String",
+      "description": "Sets the Client Keystore passphrase when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.configurations",
+      "type": "java.util.Map<java.lang.String,org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationCommon>",
+      "description": "Define additional configuration definitions",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.dns-domain",
+      "type": "java.lang.String",
+      "description": "Sets the DNS domain to use for DNS lookup.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable the component",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.lookup",
+      "type": "java.lang.String",
+      "description": "How to perform service lookup. Possible values: client, dns, environment. When using client, then the client queries the kubernetes master to obtain a list of active pods that provides the service, and then random (or round robin) select a pod. When using dns the service name is resolved as name.namespace.svc.dnsDomain. When using dnssrv the service name is resolved with SRV query for _._...svc... When using environment then environment variables are used to lookup the service. By default environment is used.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": "environment"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.master-url",
+      "type": "java.lang.String",
+      "description": "Sets the URL to the master when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.namespace",
+      "type": "java.lang.String",
+      "description": "Sets the namespace to use. Will by default use namespace from the ENV variable KUBERNETES_MASTER.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.oauth-token",
+      "type": "java.lang.String",
+      "description": "Sets the OAUTH token for authentication (instead of username\/password) when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.password",
+      "type": "java.lang.String",
+      "description": "Sets the password for authentication when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.port-name",
+      "type": "java.lang.String",
+      "description": "Sets the Port Name to use for DNS\/DNSSRV lookup.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.port-protocol",
+      "type": "java.lang.String",
+      "description": "Sets the Port Protocol to use for DNS\/DNSSRV lookup.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.properties",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Set client properties to use. These properties are specific to what service call implementation are in use. For example if using a different one, then the client properties are defined according to the specific service in use.",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.trust-certs",
+      "type": "java.lang.Boolean",
+      "description": "Sets whether to turn on trust certificate check when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.cloud.kubernetes.service-discovery.username",
+      "type": "java.lang.String",
+      "description": "Sets the username for authentication when using client lookup",
+      "sourceType": "org.apache.camel.model.cloud.springboot.KubernetesServiceCallServiceDiscoveryConfigurationProperties"
+    },
+    {
+      "name": "camel.language.constant.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.constant.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the constant language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.constant.springboot.ConstantLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.constant.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.constant.springboot.ConstantLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.exchange-property.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.exchange-property.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the exchangeProperty language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.property.springboot.ExchangePropertyLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.exchange-property.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.property.springboot.ExchangePropertyLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.file.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.file.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the file language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.file.nested",
+      "type": "java.lang.Boolean",
+      "description": "If the result is a nested simple expression should this expression be evaluated as well.",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.file.pretty",
+      "type": "java.lang.Boolean",
+      "description": "To pretty format the output (only JSon or XML supported).",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.file.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.file.trim-result",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the returned values when this language is in use.",
+      "sourceType": "org.apache.camel.language.simple.springboot.FileLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.header.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.header.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the header language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.header.springboot.HeaderLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.header.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.header.springboot.HeaderLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.ref.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.ref.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the ref language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.ref.springboot.RefLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.ref.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.ref.springboot.RefLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.simple.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.simple.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the simple language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.simple.nested",
+      "type": "java.lang.Boolean",
+      "description": "If the result is a nested simple expression should this expression be evaluated as well.",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.simple.pretty",
+      "type": "java.lang.Boolean",
+      "description": "To pretty format the output (only JSon or XML supported).",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.simple.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.simple.trim-result",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the returned values when this language is in use.",
+      "sourceType": "org.apache.camel.language.simple.springboot.SimpleLanguageConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.language.tokenize.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.tokenize.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the tokenize language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.tokenize.group-delimiter",
+      "type": "java.lang.String",
+      "description": "Sets the delimiter to use when grouping. If this has not been set then token will be used as the delimiter.",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.tokenize.source",
+      "type": "java.lang.String",
+      "description": "Source to use, instead of message body. You can prefix with variable:, header:, or property: to specify kind of source. Otherwise, the source is assumed to be a variable. Use empty or null to use default source, which is the message body.",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.tokenize.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.tokenizer.springboot.TokenizeLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.language.variable.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.LanguageConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.language.variable.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the variable language. This is enabled by default.",
+      "sourceType": "org.apache.camel.language.variable.springboot.VariableLanguageConfiguration"
+    },
+    {
+      "name": "camel.language.variable.trim",
+      "type": "java.lang.Boolean",
+      "description": "Whether to trim the source code to remove leading and trailing whitespaces and line breaks.",
+      "sourceType": "org.apache.camel.language.variable.springboot.VariableLanguageConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.resilience4j.asynchronous",
+      "type": "java.lang.Boolean",
+      "description": "Whether to use asynchronous (non-blocking) processing with CompletionStage-based circuit breaker decorators. When enabled, the circuit breaker releases the caller thread immediately and completes processing asynchronously. This is most valuable when the downstream processor supports asynchronous processing (e.g. Netty HTTP, Kafka). When used with timeout, the timeoutExecutorService must be a ScheduledExecutorService.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.automatic-transition-from-open-to-half-open-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enables automatic transition from OPEN to HALF_OPEN state once the waitDurationInOpenState has passed.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.bulkhead-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether bulkhead is enabled or not on the circuit breaker.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.bulkhead-fair-call-handling-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Configures whether the bulkhead uses a fair calling strategy. When enabled (default), a fair strategy guarantees the order of incoming requests (FIFO). When disabled, no ordering is guaranteed and may improve throughput.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.resilience4j.bulkhead-max-concurrent-calls",
+      "type": "java.lang.Integer",
+      "description": "Configures the max amount of concurrent calls the bulkhead will support.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": 25
+    },
+    {
+      "name": "camel.resilience4j.bulkhead-max-wait-duration",
+      "type": "java.lang.String",
+      "description": "Configures a maximum amount of time which the calling thread will wait to enter the bulkhead. The default is 0 (no waiting).",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "0"
+    },
+    {
+      "name": "camel.resilience4j.circuit-breaker",
+      "type": "java.lang.String",
+      "description": "Refers to an existing io.github.resilience4j.circuitbreaker.CircuitBreaker instance to lookup and use from the registry. When using this, then any other circuit breaker options are not in use.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.config",
+      "type": "java.lang.String",
+      "description": "Refers to an existing io.github.resilience4j.circuitbreaker.CircuitBreakerConfig instance to lookup and use from the registry.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.configurations",
+      "type": "java.util.Map<java.lang.String,org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionCommon>",
+      "description": "Define additional configuration definitions",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enable the component",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.resilience4j.failure-rate-threshold",
+      "type": "java.lang.Float",
+      "description": "Configures the failure rate threshold in percentage. If the failure rate is equal or greater than the threshold the CircuitBreaker transitions to open and starts short-circuiting calls.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.ignore-exception",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Configure a list of exceptions that are ignored and neither count as a failure nor success. Any exception matching or inheriting from one of the list will not count as a failure nor success, even if the exception is part of recordExceptions.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.max-wait-duration-in-half-open-state",
+      "type": "java.lang.String",
+      "description": "Configures the maximum wait duration which controls how long the CircuitBreaker should stay in Half Open state, before it switches to open. Value 0 means circuit breaker will wait in half open state until all permitted calls have been completed.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "0"
+    },
+    {
+      "name": "camel.resilience4j.micrometer-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable collecting statistics using Micrometer for all circuit breaker instances. This is a global setting (configure via camel.resilience4j.micrometerEnabled=true) and requires adding camel-resilience4j-micrometer JAR to the classpath.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.minimum-number-of-calls",
+      "type": "java.lang.Integer",
+      "description": "Configures the minimum number of calls which are required (per sliding window period) before the CircuitBreaker can calculate the error rate.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": 100
+    },
+    {
+      "name": "camel.resilience4j.permitted-number-of-calls-in-half-open-state",
+      "type": "java.lang.Integer",
+      "description": "Configures the number of permitted calls when the CircuitBreaker is half open.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "camel.resilience4j.record-exception",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Configure a list of exceptions that are recorded as a failure and thus increase the failure rate. Any exception matching or inheriting from one of the list counts as a failure, unless explicitly ignored via ignoreExceptions.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.sliding-window-size",
+      "type": "java.lang.Integer",
+      "description": "Configures the size of the sliding window which is used to record the outcome of calls when the CircuitBreaker is closed. Sliding window can either be count-based or time-based.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": 100
+    },
+    {
+      "name": "camel.resilience4j.sliding-window-synchronization-strategy",
+      "type": "java.lang.String",
+      "description": "Configures the synchronization strategy for the sliding window. LOCK_FREE uses a CAS-based lock-free algorithm for better performance under high concurrency. SYNCHRONIZED uses blocking locks with lower memory allocation.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "SYNCHRONIZED"
+    },
+    {
+      "name": "camel.resilience4j.sliding-window-type",
+      "type": "java.lang.String",
+      "description": "Configures the type of the sliding window which is used to record the outcome of calls when the CircuitBreaker is closed. Sliding window can either be count-based or time-based.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "COUNT_BASED"
+    },
+    {
+      "name": "camel.resilience4j.slow-call-duration-threshold",
+      "type": "java.lang.String",
+      "description": "Configures the duration threshold above which calls are considered as slow and increase the slow calls percentage. The default is 60 seconds.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "60000"
+    },
+    {
+      "name": "camel.resilience4j.slow-call-rate-threshold",
+      "type": "java.lang.Float",
+      "description": "Configures a threshold in percentage. The CircuitBreaker considers a call as slow when the call duration is greater than slowCallDurationThreshold. When the percentage of slow calls is equal or greater the threshold, the CircuitBreaker transitions to open and starts short-circuiting calls.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.throw-exception-when-half-open-or-open-state",
+      "type": "java.lang.Boolean",
+      "description": "Whether to throw io.github.resilience4j.circuitbreaker.CallNotPermittedException when the call is rejected because the circuit breaker is half open or open.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.timeout-cancel-running-future",
+      "type": "java.lang.Boolean",
+      "description": "Configures whether cancel is called on the running future. Defaults to true.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.resilience4j.timeout-duration",
+      "type": "java.lang.String",
+      "description": "Configures the thread execution timeout. Default value is 1 second.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "1000"
+    },
+    {
+      "name": "camel.resilience4j.timeout-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether timeout is enabled or not on the circuit breaker.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.resilience4j.timeout-executor-service",
+      "type": "java.util.concurrent.ExecutorService",
+      "description": "References to a custom thread pool to use when timeout is enabled (uses ForkJoinPool.commonPool() by default).",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.resilience4j.wait-duration-in-open-state",
+      "type": "java.lang.String",
+      "description": "Configures the wait duration which specifies how long the CircuitBreaker should stay open, before it switches to half open. The default is 60 seconds.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": "60000"
+    },
+    {
+      "name": "camel.resilience4j.writable-stack-trace-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Enables writable stack traces. When set to false, Exception.getStackTrace returns a zero length array. This may be used to reduce log spam when the circuit breaker is open.",
+      "sourceType": "org.apache.camel.model.springboot.Resilience4jConfigurationDefinitionProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.rest.api-component",
+      "type": "java.lang.String",
+      "description": "The name of the Camel component to use as the REST API (such as OpenApi).",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.api-context-path",
+      "type": "java.lang.String",
+      "description": "Sets a leading context-path the REST API will be using.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.api-context-route-id",
+      "type": "java.lang.String",
+      "description": "Sets the route id to use for the route that services the REST API. The route will by default use an auto assigned route id.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.api-host",
+      "type": "java.lang.String",
+      "description": "To use a specific hostname for the API documentation (such as swagger or openapi). This can be used to override the generated host with this configured hostname.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.api-property",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure as many additional properties for the api documentation.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.api-vendor-extension",
+      "type": "java.lang.Boolean",
+      "description": "Whether vendor extension is enabled in the Rest APIs. If enabled then Camel will include additional information as vendor extension (eg keys starting with x-) such as route ids, class names etc.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.binding-mode",
+      "type": "org.apache.camel.model.rest.RestBindingMode",
+      "description": "Sets the binding mode for automatic marshalling and unmarshalling of request and response bodies. off (default) disables binding. auto detects JSON or XML from the Content-Type header. json binds using a JSON data format only. xml binds using an XML data format only. json_xml supports both JSON and XML.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": "off"
+    },
+    {
+      "name": "camel.rest.binding-package-scan",
+      "type": "java.lang.String",
+      "description": "Package name to use as base (offset) for classpath scanning of POJO classes are located when using binding mode is enabled for JSon or XML. Multiple package names can be separated by comma.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.client-request-validation",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable validation of the client request to check whether Content-Type\/Accept headers, required parameters, and message body are valid.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.client-response-validation",
+      "type": "java.lang.Boolean",
+      "description": "Whether to validate what Camel is returning as response to the client, such as checking status-code, Content-Type, and headers match the Rest DSL response definition.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.component",
+      "type": "java.lang.String",
+      "description": "The Camel Rest component to use for the REST transport (consumer), such as netty-http, jetty, servlet, undertow.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.component-property",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure as many additional properties for the rest component in use.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.consumer-property",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure as many additional properties for the rest consumer in use.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.context-path",
+      "type": "java.lang.String",
+      "description": "Sets a leading context-path the REST services will be using. This can be used when using components such as camel-servlet where the deployed web application is deployed using a context-path.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.cors-headers",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure custom CORS headers.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.data-format-property",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure as many additional properties for the data formats in use. For example set property prettyPrint to true to have json outputted in pretty mode.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.enable-cors",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable CORS headers in the HTTP response.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.enable-no-content-response",
+      "type": "java.lang.Boolean",
+      "description": "Whether to return HTTP 204 with an empty body when a response contains an empty JSON object or XML root object.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.endpoint-property",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure as many additional properties for the rest endpoint in use.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.host",
+      "type": "java.lang.String",
+      "description": "The hostname to use for exposing the REST service.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.host-name-resolver",
+      "type": "org.apache.camel.model.rest.RestHostNameResolver",
+      "description": "If no hostname has been explicit configured, then this resolver is used to compute the hostname the REST service will be using.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": "alllocalip"
+    },
+    {
+      "name": "camel.rest.inline-routes",
+      "type": "java.lang.Boolean",
+      "description": "Inline routes in rest-dsl which are linked using direct endpoints. By inlining, Camel can optimize and inline this as a single route, however this requires to use direct endpoints, which must be unique per service.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.rest.json-data-format",
+      "type": "java.lang.String",
+      "description": "Name of specific json data format to use. By default jackson will be used. Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": "jackson"
+    },
+    {
+      "name": "camel.rest.port",
+      "type": "java.lang.String",
+      "description": "The port number to use for exposing the REST service.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.producer-api-doc",
+      "type": "java.lang.String",
+      "description": "Sets the location of the api document the REST producer will use to validate the REST uri and query parameters are valid accordingly to the api document.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.producer-component",
+      "type": "java.lang.String",
+      "description": "Sets the name of the Camel component to use as the REST producer.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.scheme",
+      "type": "java.lang.String",
+      "description": "The scheme to use for exposing the REST service. Usually http or https is supported.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.skip-binding-on-error-code",
+      "type": "java.lang.Boolean",
+      "description": "Whether to skip binding on output if there is a custom HTTP error code header. This allows to build custom error messages that do not bind to json \/ xml etc, as success messages otherwise will do.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.use-x-forward-headers",
+      "type": "java.lang.Boolean",
+      "description": "Whether to use X-Forward headers to set host etc. for OpenApi. This may be needed in special cases involving reverse-proxy and networking going from HTTP to HTTPS etc.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.rest.validation-levels",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "Allows to configure custom validation levels when using camel-openapi-validator with client request\/response validator.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties"
+    },
+    {
+      "name": "camel.rest.xml-data-format",
+      "type": "java.lang.String",
+      "description": "Name of specific XML data format to use. By default jaxb will be used. Important: This option is only for setting a custom name of the data format, not to refer to an existing data format instance.",
+      "sourceType": "org.apache.camel.model.rest.springboot.RestConfigurationDefinitionProperties",
+      "defaultValue": "jaxb"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

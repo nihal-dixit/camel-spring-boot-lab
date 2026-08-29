@@ -1,0 +1,61 @@
+{
+  "groups": [
+    {
+      "name": "camel.dataformat.gzip-deflater",
+      "type": "org.apache.camel.dataformat.deflater.springboot.GzipDeflaterDataFormatConfiguration",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.GzipDeflaterDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.gzip-deflater.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.GzipDeflaterDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    },
+    {
+      "name": "camel.dataformat.zip-deflater",
+      "type": "org.apache.camel.dataformat.deflater.springboot.ZipDeflaterDataFormatConfiguration",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.ZipDeflaterDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.zip-deflater.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.ZipDeflaterDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.dataformat.gzip-deflater.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.gzip-deflater.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the gzipDeflater data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.GzipDeflaterDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.zip-deflater.compression-level",
+      "type": "java.lang.Integer",
+      "description": "Compression level to use (0-9). -1 is default compression, 0 is no compression, and 9 is the best compression.",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.ZipDeflaterDataFormatConfiguration",
+      "defaultValue": -1
+    },
+    {
+      "name": "camel.dataformat.zip-deflater.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.zip-deflater.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the zipDeflater data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.dataformat.deflater.springboot.ZipDeflaterDataFormatConfiguration"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "kubernetes-configmaps",
+    "title": "Kubernetes Config Maps",
+    "description": "Kubernetes Cluster Config Maps",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.component.kubernetes.config_maps.vault.ConfigmapsDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-kubernetes-starter",
+    "version": "4.23.0-SNAPSHOT"
+  }
+}
+

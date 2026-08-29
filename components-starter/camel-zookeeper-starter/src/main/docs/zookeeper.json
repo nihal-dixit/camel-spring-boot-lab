@@ -1,0 +1,108 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.zookeeper",
+      "type": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration"
+    },
+    {
+      "name": "camel.component.zookeeper.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.zookeeper.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.zookeeper.backoff",
+      "type": "java.lang.Long",
+      "description": "The time interval to backoff for after an error before retrying.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": 5000
+    },
+    {
+      "name": "camel.component.zookeeper.bridge-error-handler",
+      "type": "java.lang.Boolean",
+      "description": "Allows for bridging the consumer to the Camel routing Error Handler, which mean any exceptions (if possible) occurred while the Camel consumer is trying to pickup incoming messages, or the likes, will now be processed as a message and handled by the routing Error Handler. Important: This is only possible if the 3rd party component allows Camel to be alerted if an exception was thrown. Some components handle this internally only, and therefore bridgeErrorHandler is not possible. In other situations we may improve the Camel component to hook into the 3rd party component and make this possible for future releases. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions, that will be logged at WARN or ERROR level and ignored.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.zookeeper.configuration",
+      "type": "org.apache.camel.component.zookeeper.ZooKeeperConfiguration",
+      "description": "To use a shared ZooKeeperConfiguration. The option is a org.apache.camel.component.zookeeper.ZooKeeperConfiguration type.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration"
+    },
+    {
+      "name": "camel.component.zookeeper.create",
+      "type": "java.lang.Boolean",
+      "description": "Should the endpoint create the node if it does not currently exist.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.zookeeper.create-mode",
+      "type": "java.lang.String",
+      "description": "The create mode that should be used for the newly created node",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": "EPHEMERAL"
+    },
+    {
+      "name": "camel.component.zookeeper.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.zookeeper.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the zookeeper component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration"
+    },
+    {
+      "name": "camel.component.zookeeper.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.zookeeper.list-children",
+      "type": "java.lang.Boolean",
+      "description": "Whether the children of the node should be listed",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.zookeeper.repeat",
+      "type": "java.lang.Boolean",
+      "description": "Should changes to the znode be 'watched' and repeatedly processed.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.zookeeper.send-empty-message-on-delete",
+      "type": "java.lang.Boolean",
+      "description": "Upon the delete of a znode, should an empty message be send to the consumer",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.zookeeper.timeout",
+      "type": "java.lang.Integer",
+      "description": "The time interval to wait on connection before timing out.",
+      "sourceType": "org.apache.camel.component.zookeeper.springboot.ZooKeeperComponentConfiguration",
+      "defaultValue": 5000
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

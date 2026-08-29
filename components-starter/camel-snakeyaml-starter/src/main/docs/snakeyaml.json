@@ -1,0 +1,103 @@
+{
+  "groups": [
+    {
+      "name": "camel.dataformat.snake-yaml",
+      "type": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.dataformat.snake-yaml.allow-any-type",
+      "type": "java.lang.Boolean",
+      "description": "Allow any class to be un-marshaled.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.allow-recursive-keys",
+      "type": "java.lang.Boolean",
+      "description": "Set whether recursive keys are allowed.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.constructor",
+      "type": "java.lang.String",
+      "description": "BaseConstructor to construct incoming documents.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.dumper-options",
+      "type": "java.lang.String",
+      "description": "DumperOptions to configure outgoing objects.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the snakeYaml data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.max-aliases-for-collections",
+      "type": "java.lang.Integer",
+      "description": "Set the maximum amount of aliases allowed for collections.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "defaultValue": 50
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.pretty-flow",
+      "type": "java.lang.Boolean",
+      "description": "Force the emitter to produce a pretty YAML document when using the flow style.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.representer",
+      "type": "java.lang.String",
+      "description": "Representer to emit outgoing objects.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.resolver",
+      "type": "java.lang.String",
+      "description": "Resolver to detect implicit type.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.type-filter",
+      "type": "java.lang.String",
+      "description": "Set the types SnakeYAML is allowed to un-marshall. Multiple types can be separated by comma.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.unmarshal-type",
+      "type": "java.lang.String",
+      "description": "Class name of the java type to use when unmarshalling.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.snake-yaml.use-application-context-class-loader",
+      "type": "java.lang.Boolean",
+      "description": "Use ApplicationContextClassLoader as custom ClassLoader.",
+      "sourceType": "org.apache.camel.component.snakeyaml.springboot.SnakeYAMLDataFormatConfiguration",
+      "defaultValue": true
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

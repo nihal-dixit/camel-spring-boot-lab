@@ -1,0 +1,3 @@
+= Jolokia
+
+This page has moved to xref:starters/jolokia.adoc[Jolokia].

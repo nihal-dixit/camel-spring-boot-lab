@@ -1,0 +1,3 @@
+= Consul Cluster Service
+
+This page has moved to xref:starters/consul-cluster-service.adoc[Consul Cluster Service].

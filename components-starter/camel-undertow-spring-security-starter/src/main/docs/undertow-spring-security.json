@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "camel.security.undertow",
+      "type": "org.apache.camel.undertow.spring.boot.UndertowSpringSecurityConfiguration",
+      "sourceType": "org.apache.camel.undertow.spring.boot.UndertowSpringSecurityConfiguration"
+    },
+    {
+      "name": "camel.security.undertow.keycloak",
+      "type": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration",
+      "sourceType": "org.apache.camel.undertow.spring.boot.UndertowSpringSecurityConfiguration",
+      "sourceMethod": "getKeycloak()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.security.undertow.keycloak",
+      "type": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration",
+      "description": "Properties defined for keycloak provider. Value is gathered together from properties with prefix \"camel.component.undertow.spring.security.keycloak\"",
+      "sourceType": "org.apache.camel.undertow.spring.boot.UndertowSpringSecurityConfiguration"
+    },
+    {
+      "name": "camel.security.undertow.keycloak.client-id",
+      "type": "java.lang.String",
+      "description": "Client id from the Keycloak server used for authentication.",
+      "sourceType": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration"
+    },
+    {
+      "name": "camel.security.undertow.keycloak.realm-id",
+      "type": "java.lang.String",
+      "description": "Realm id from the keycloak server used for authentication.",
+      "sourceType": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration"
+    },
+    {
+      "name": "camel.security.undertow.keycloak.url",
+      "type": "java.lang.String",
+      "description": "Url to keycloak server which will be used in spring security configuration. (Example \"http:\/\/localhost:8080\")",
+      "sourceType": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration"
+    },
+    {
+      "name": "camel.security.undertow.keycloak.user-name-attribute",
+      "type": "java.lang.String",
+      "description": "Name of the attribute, which will be used as username.",
+      "sourceType": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration",
+      "defaultValue": "preferred_username"
+    },
+    {
+      "name": "camel.security.undertow.keycloak.validate-audience",
+      "type": "java.lang.Boolean",
+      "description": "Whether an incoming token must carry the configured client id in its aud claim. Every client of a realm shares the signing key, so with this disabled a token minted for any other client of the same realm is accepted.",
+      "sourceType": "org.apache.camel.undertow.spring.boot.providers.KeycloakProviderConfiguration",
+      "defaultValue": true
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

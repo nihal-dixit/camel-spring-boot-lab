@@ -1,0 +1,121 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.langchain4j-agent",
+      "type": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.langchain4j-agent.agent",
+      "type": "org.apache.camel.component.langchain4j.agent.api.Agent",
+      "description": "The agent to use for the component. The option is a org.apache.camel.component.langchain4j.agent.api.Agent type.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.agent-configuration",
+      "type": "org.apache.camel.component.langchain4j.agent.api.AgentConfiguration",
+      "description": "AgentConfiguration used by Camel to create the agent internally. When set, Camel creates an AgentWithMemory if a ChatMemoryProvider is configured, otherwise an AgentWithoutMemory. If an agentFactory is also configured, the factory takes precedence. The option is a org.apache.camel.component.langchain4j.agent.api.AgentConfiguration type.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.agent-factory",
+      "type": "org.apache.camel.component.langchain4j.agent.api.AgentFactory",
+      "description": "The agent factory to use for creating agents if no Agent is provided. The option is a org.apache.camel.component.langchain4j.agent.api.AgentFactory type.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.langchain4j-agent.compensate-on-tool-errors",
+      "type": "java.lang.Boolean",
+      "description": "Whether LangChain4j should compensate when a tool execution fails. Only supported in inline agent creation mode (agentConfiguration without agent or agentFactory). URI value overrides the same option on the agentConfiguration bean.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.langchain4j-agent.configuration",
+      "type": "org.apache.camel.component.langchain4j.agent.LangChain4jAgentConfiguration",
+      "description": "The configuration. The option is a org.apache.camel.component.langchain4j.agent.LangChain4jAgentConfiguration type.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the langchain4j-agent component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.execute-tools-concurrently",
+      "type": "java.lang.Boolean",
+      "description": "Whether multiple tools requested in a single LLM turn are executed concurrently. Camel route tools run on isolated exchange copies. Only supported in inline agent creation mode (agentConfiguration without agent or agentFactory). URI value overrides the same option on the agentConfiguration bean.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.langchain4j-agent.json-schema",
+      "type": "java.lang.String",
+      "description": "JSON schema for structured output validation. Only supported in inline agent creation mode: agentConfiguration must be set and neither agent nor agentFactory may be configured. Mutually exclusive with outputClass.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.langchain4j-agent.max-tool-calling-round-trips",
+      "type": "java.lang.Integer",
+      "description": "Maximum number of tool-calling round trips allowed per request. Each round trip is one LLM call plus execution of the tools requested in that call. Set to 0 to leave unset and use the LangChain4j default. Only supported in inline agent creation mode (agentConfiguration without agent or agentFactory). URI value overrides the same option on the agentConfiguration bean.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration",
+      "defaultValue": 0
+    },
+    {
+      "name": "camel.component.langchain4j-agent.mcp-clients",
+      "type": "java.util.List<dev.langchain4j.mcp.client.McpClient>",
+      "description": "Pre-built MCP (Model Context Protocol) client instances for external tool integration. Reference beans from the registry, e.g., #myMcpClient1,#myMcpClient2",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.mcp-server",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "description": "MCP server definitions in the form of mcpServer..=. Supported properties: transportType (stdio, http or streamableHttp, default: stdio), command (comma-separated, for stdio), url (for http\/streamableHttp), environment.= (for stdio), timeout (in seconds, default: 60), logRequests, logResponses, oauthProfile (OAuth profile for HTTP auth, requires camel-oauth). This is a multi-value option with prefix: mcpServer.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.output-class",
+      "type": "java.lang.Class<java.lang.Object>",
+      "description": "Java class to use for structured output. Camel derives the JSON schema from the class and instructs the model to produce matching JSON; the response body is left as a raw JSON string. Only supported in inline agent creation mode: agentConfiguration must be set and neither agent nor agentFactory may be configured. The class must be a POJO with public fields or getters; simple types, enums, and collections are not supported. Mutually exclusive with jsonSchema.",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    },
+    {
+      "name": "camel.component.langchain4j-agent.tags",
+      "type": "java.lang.String",
+      "description": "Tags for discovering and calling Camel route tools",
+      "sourceType": "org.apache.camel.component.langchain4j.agent.springboot.LangChain4jAgentComponentConfiguration"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

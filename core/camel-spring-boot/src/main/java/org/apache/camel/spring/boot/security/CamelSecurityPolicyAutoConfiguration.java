@@ -1,0 +1,180 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package org.apache.camel.spring.boot.security;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.apache.camel.CamelContext;
+import org.apache.camel.RuntimeCamelException;
+import org.apache.camel.main.SecurityConfigurationProperties;
+import org.apache.camel.main.SecurityPolicyResult;
+import org.apache.camel.spring.boot.CamelAutoConfiguration;
+import org.apache.camel.support.CamelContextHelper;
+import org.apache.camel.util.SecurityUtils;
+import org.apache.camel.util.SecurityViolation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.properties.source.ConfigurationPropertyName;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.ConfigurableEnvironment;
+import org.springframework.core.env.EnumerablePropertySource;
+import org.springframework.core.env.Environment;
+
+@AutoConfiguration(after = CamelAutoConfiguration.class)
+@ConditionalOnBean(CamelAutoConfiguration.class)
+@EnableConfigurationProperties(CamelSecurityPolicyConfigurationProperties.class)
+public class CamelSecurityPolicyAutoConfiguration {
+
+    private static final Logger LOG = LoggerFactory.getLogger(CamelSecurityPolicyAutoConfiguration.class);
+    private static final String CAMEL_PREFIX = "camel.";
+
+    @Bean
+    SecurityPolicyResult camelSecurityPolicyResult(CamelContext camelContext,
+            CamelSecurityPolicyConfigurationProperties config, Environment environment) {
+
+        // apply profile-based security defaults
+        // (do not mutate the shared configuration properties bean)
+        String profile = camelContext.getCamelContextExtension().getProfile();
+        String policy = config.getPolicy();
+        String insecureDevPolicy = config.getInsecureDevPolicy();
+        if ("dev".equals(profile) && insecureDevPolicy == null) {
+            insecureDevPolicy = "allow";
+        } else if ("prod".equals(profile) && "warn".equals(policy)) {
+            policy = "fail";
+        }
+
+        SecurityConfigurationProperties securityConfig = applySecurityProperties(config, policy, insecureDevPolicy);
+
+        Map<String, Object> camelProperties = extractCamelProperties(environment);
+
+        List<SecurityViolation> violations = SecurityUtils.detectViolations(camelProperties,
+                (k, v) -> containsSensitive(camelContext, k, v), securityConfig::resolvePolicy,
+                securityConfig.getAllowedPropertySet());
+
+        SecurityPolicyResult result = new SecurityPolicyResult(violations);
+        camelContext.getCamelContextExtension().addContextPlugin(SecurityPolicyResult.class, result);
+
+        enforceViolations(violations);
+
+        return result;
+    }
+
+    private SecurityConfigurationProperties applySecurityProperties(CamelSecurityPolicyConfigurationProperties config,
+            String policy, String insecureDevPolicy) {
+
+        // get the security config from camel-main's MainConfigurationProperties
+        // which is already bound by CamelAutoConfiguration via CamelConfigurationProperties
+        SecurityConfigurationProperties securityConfig = new SecurityConfigurationProperties(null);
+
+        securityConfig.setPolicy(policy);
+        if (config.getSecretPolicy() != null) {
+            securityConfig.setSecretPolicy(config.getSecretPolicy());
+        }
+        if (config.getInsecureSslPolicy() != null) {
+            securityConfig.setInsecureSslPolicy(config.getInsecureSslPolicy());
+        }
+        if (config.getInsecureSerializationPolicy() != null) {
+            securityConfig.setInsecureSerializationPolicy(config.getInsecureSerializationPolicy());
+        }
+        if (insecureDevPolicy != null) {
+            securityConfig.setInsecureDevPolicy(insecureDevPolicy);
+        }
+        if (config.getAllowedProperties() != null) {
+            securityConfig.setAllowedProperties(config.getAllowedProperties());
+        }
+
+        return securityConfig;
+    }
+
+    private static Map<String, Object> extractCamelProperties(Environment environment) {
+        Map<String, Object> properties = new LinkedHashMap<>();
+
+        if (environment instanceof ConfigurableEnvironment ce) {
+            ce.getPropertySources().forEach(ps -> {
+                if (ps instanceof EnumerablePropertySource<?> eps) {
+                    for (String name : eps.getPropertyNames()) {
+                        String canonical = canonicalCamelName(name);
+                        if (canonical != null && !canonical.startsWith("camel.security.")) {
+                            Object value = environment.getProperty(canonical);
+                            if (value != null) {
+                                properties.putIfAbsent(canonical, value);
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        return properties;
+    }
+
+    /**
+     * Canonicalizes a property name as its source reports it, returning <tt>null</tt> when it is not a Camel
+     * property.
+     * <p/>
+     * Property sources report names in their own form: an option set in application.properties arrives as
+     * <tt>camel.component.foo.bar</tt>, while the same option set as an environment variable arrives as
+     * <tt>CAMEL_COMPONENT_FOO_BAR</tt>. Spring's relaxed binding applies both to the same option, so both have to
+     * be recognised here - otherwise every option configured through the environment, which is the usual way to
+     * configure a containerised application, is invisible to the policy check.
+     */
+    private static String canonicalCamelName(String name) {
+        if (name == null) {
+            return null;
+        }
+        if (name.startsWith(CAMEL_PREFIX)) {
+            return name;
+        }
+        ConfigurationPropertyName adapted = ConfigurationPropertyName.adapt(name, '_');
+        String canonical = adapted.toString();
+        return canonical.startsWith(CAMEL_PREFIX) ? canonical : null;
+    }
+
+    private static boolean containsSensitive(CamelContext camelContext, String key, Object value) {
+        boolean answer = CamelContextHelper.containsSensitive(camelContext, key);
+        if (!answer && value != null) {
+            String v = value.toString();
+            answer = v.startsWith("RAW(");
+        }
+        return answer;
+    }
+
+    private static void enforceViolations(List<SecurityViolation> violations) {
+        List<String> failures = new ArrayList<>();
+        for (SecurityViolation v : violations) {
+            if ("fail".equals(v.policy())) {
+                failures.add(v.toString());
+            } else {
+                LOG.warn("SECURITY WARNING: {}", v);
+            }
+        }
+
+        if (!failures.isEmpty()) {
+            throw new RuntimeCamelException(
+                    "Security policy violations detected (policy=fail):\n - " + String.join("\n - ", failures)
+                            + "\nTo allow specific properties, add them to camel.security.allowed-properties"
+                            + " or change the policy to 'warn' or 'allow'.");
+        }
+    }
+
+}

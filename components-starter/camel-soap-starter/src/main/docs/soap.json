@@ -1,0 +1,76 @@
+{
+  "groups": [
+    {
+      "name": "camel.dataformat.soap",
+      "type": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.dataformat.soap.context-path",
+      "type": "java.lang.String",
+      "description": "Package name where your JAXB classes are located.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.soap.element-name-strategy",
+      "type": "java.lang.String",
+      "description": "Refers to an element strategy to lookup from the registry. The option is a org.apache.camel.dataformat.soap.name.ElementNameStrategy type.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the soap data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.encoding",
+      "type": "java.lang.String",
+      "description": "To overrule and use a specific encoding.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.ignore-unmarshalled-headers",
+      "type": "java.lang.Boolean",
+      "description": "Whether to ignore headers that were not unmarshalled.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.soap.namespace-prefix",
+      "type": "java.util.Map",
+      "description": "When marshalling using JAXB or SOAP then the JAXB implementation will automatic assign namespace prefixes. To control this mapping, Camel allows you to refer to a map which contains the desired mapping.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.schema",
+      "type": "java.lang.String",
+      "description": "To validate against an existing schema. You can use the prefix classpath:, file: or http: to specify how the resource should be resolved. You can separate multiple schema files by using the ',' character.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.soap.version",
+      "type": "java.lang.String",
+      "description": "SOAP version should either be 1.1 or 1.2. Is by default 1.1.",
+      "sourceType": "org.apache.camel.dataformat.soap.springboot.SoapDataFormatConfiguration",
+      "defaultValue": "1.1"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

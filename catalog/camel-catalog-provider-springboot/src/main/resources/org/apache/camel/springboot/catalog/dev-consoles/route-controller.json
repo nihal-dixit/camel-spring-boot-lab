@@ -1,0 +1,48 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "route-controller",
+    "title": "Route Controller",
+    "description": "Route controller information",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.RouteControllerConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  },
+  "options": {
+    "error": {
+      "index": 0,
+      "kind": "option",
+      "displayName": "Error",
+      "group": "query",
+      "label": "query",
+      "required": false,
+      "type": "boolean",
+      "javaType": "java.lang.Boolean",
+      "deprecated": false,
+      "autowired": false,
+      "secret": false,
+      "defaultValue": true,
+      "description": "Whether to include error details"
+    },
+    "stacktrace": {
+      "index": 1,
+      "kind": "option",
+      "displayName": "Stacktrace",
+      "group": "query",
+      "label": "query",
+      "required": false,
+      "type": "boolean",
+      "javaType": "java.lang.Boolean",
+      "deprecated": false,
+      "autowired": false,
+      "secret": false,
+      "defaultValue": true,
+      "description": "Whether to include stack traces"
+    }
+  }
+}
+

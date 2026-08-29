@@ -1,0 +1,125 @@
+{
+  "groups": [
+    {
+      "name": "camel.dataformat.pgp",
+      "type": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.customizer",
+      "type": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.dataformat.pgp.algorithm",
+      "type": "java.lang.Integer",
+      "description": "Symmetric key encryption algorithm; possible values are defined in org.bouncycastle.bcpg.SymmetricKeyAlgorithmTags. Only relevant for encrypting.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.armored",
+      "type": "java.lang.Boolean",
+      "description": "This option will cause PGP to base64 encode the encrypted text, making it available for copy\/paste, etc.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.dataformat.pgp.compression-algorithm",
+      "type": "java.lang.Integer",
+      "description": "Compression algorithm; possible values are defined in org.bouncycastle.bcpg.CompressionAlgorithmTags. Only relevant for encrypting.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.DataFormatConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.dataformat.pgp.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the pgp data format. This is enabled by default.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.hash-algorithm",
+      "type": "java.lang.Integer",
+      "description": "Signature hash algorithm; possible values are defined in org.bouncycastle.bcpg.HashAlgorithmTags. Only relevant for signing.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.integrity",
+      "type": "java.lang.Boolean",
+      "description": "Adds an integrity check\/sign into the encryption file.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.dataformat.pgp.key-file-name",
+      "type": "java.lang.String",
+      "description": "Filename of the keyring; must be accessible as a classpath resource (but you can specify a location in the file system by using the file: prefix).",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.key-userid",
+      "type": "java.lang.String",
+      "description": "The user ID of the key in the PGP keyring used during encryption. Can also be only a part of a user ID.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.password",
+      "type": "java.lang.String",
+      "description": "Password used when opening the private key (not used for encryption).",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.provider",
+      "type": "java.lang.String",
+      "description": "Java Cryptography Extension (JCE) provider, default is Bouncy Castle (BC). Alternatively you can use, for example, the IAIK JCE provider.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.require-integrity-protection",
+      "type": "java.lang.Boolean",
+      "description": "Whether a message must be integrity protected in order to be decrypted. The legacy symmetrically encrypted data packet carries no modification detection code, and the packet type is chosen by whoever produced the message, so accepting it lets the sender decide whether the integrity check applies. Set to false only to interoperate with a sender that still emits the legacy packet.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.dataformat.pgp.signature-key-file-name",
+      "type": "java.lang.String",
+      "description": "Filename of the keyring to use for signing (during encryption) or for signature verification (during decryption); must be accessible as a classpath resource (but you can specify a location in the file system by using the file: prefix).",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.signature-key-ring",
+      "type": "java.lang.String",
+      "description": "Keyring used for signing\/verifying as byte array. You cannot set the signatureKeyFileName and signatureKeyRing at the same time.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.signature-key-userid",
+      "type": "java.lang.String",
+      "description": "User ID of the key in the PGP keyring used for signing (during encryption) or signature verification (during decryption).",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.signature-password",
+      "type": "java.lang.String",
+      "description": "Password used when opening the private key used for signing (during encryption).",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    },
+    {
+      "name": "camel.dataformat.pgp.signature-verification-option",
+      "type": "java.lang.String",
+      "description": "Controls the behavior for verifying the signature during unmarshaling. Possible values: optional, required, ignore, no_signature_allowed.",
+      "sourceType": "org.apache.camel.converter.crypto.springboot.PGPDataFormatConfiguration"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

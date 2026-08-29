@@ -1,0 +1,33 @@
+{
+  "console": {
+    "kind": "console",
+    "group": "camel",
+    "name": "thread",
+    "title": "Thread",
+    "description": "Displays JVM Threads information",
+    "deprecated": false,
+    "readOnly": true,
+    "javaType": "org.apache.camel.impl.console.ThreadDevConsole",
+    "groupId": "org.apache.camel.springboot",
+    "artifactId": "camel-console-starter",
+    "version": "4.23.0-SNAPSHOT"
+  },
+  "options": {
+    "stackTrace": {
+      "index": 0,
+      "kind": "option",
+      "displayName": "Stack Trace",
+      "group": "query",
+      "label": "query",
+      "required": false,
+      "type": "boolean",
+      "javaType": "java.lang.Boolean",
+      "deprecated": false,
+      "autowired": false,
+      "secret": false,
+      "defaultValue": false,
+      "description": "Whether to include thread stack traces"
+    }
+  }
+}
+

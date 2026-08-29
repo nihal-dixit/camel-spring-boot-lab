@@ -1,0 +1,408 @@
+{
+  "groups": [
+    {
+      "name": "camel.component.docling",
+      "type": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.customizer",
+      "type": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "sourceMethod": "getCustomizer()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "camel.component.docling.abort-on-error",
+      "type": "java.lang.Boolean",
+      "description": "Abort processing on error",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.allow-file-path-source",
+      "type": "java.lang.Boolean",
+      "description": "Whether a String message body that starts with \/ or contains \\ is interpreted as a local filesystem path to read. When disabled, such a body is rejected instead of being read. This does not affect the CamelDoclingInputFilePath header, nor File, byte or explicit path collection bodies used by the batch operations.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.allow-url-source",
+      "type": "java.lang.Boolean",
+      "description": "Whether a String message body that starts with http:\/\/ or https:\/\/ is interpreted as a remote URL for Docling to fetch. When disabled, such a body is rejected instead of being fetched. This does not affect the CamelDoclingInputFilePath header, nor bodies of any other type.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.api-key-header",
+      "type": "java.lang.String",
+      "description": "Header name for API key authentication",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "X-API-Key"
+    },
+    {
+      "name": "camel.component.docling.async-poll-interval",
+      "type": "java.lang.Long",
+      "description": "Polling interval for async conversion status in milliseconds",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 2000
+    },
+    {
+      "name": "camel.component.docling.async-task-ttl",
+      "type": "java.lang.Long",
+      "description": "Time-to-live for pending async conversion tasks in milliseconds. Tasks older than this will be evicted from memory to prevent leaks.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 86400000
+    },
+    {
+      "name": "camel.component.docling.async-timeout",
+      "type": "java.lang.Long",
+      "description": "Maximum time to wait for async conversion completion in milliseconds",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 300000
+    },
+    {
+      "name": "camel.component.docling.authentication-scheme",
+      "type": "org.apache.camel.component.docling.AuthenticationScheme",
+      "description": "Authentication scheme (BEARER, API_KEY, NONE)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "none"
+    },
+    {
+      "name": "camel.component.docling.authentication-token",
+      "type": "java.lang.String",
+      "description": "Authentication token for docling-serve API (Bearer token or API key)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.autowired-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether autowiring is enabled. This is used for automatic autowiring options (the option must be marked as autowired) by looking up in the registry to find if there is a single instance of matching type, which then gets configured on the component. This can be used for automatic configuring JDBC data sources, JMS connection factories, AWS Clients, etc.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.docling.batch-fail-on-first-error",
+      "type": "java.lang.Boolean",
+      "description": "Fail entire batch on first error (true) or continue processing remaining documents (false)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.docling.batch-parallelism",
+      "type": "java.lang.Integer",
+      "description": "Number of parallel threads for batch processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 4
+    },
+    {
+      "name": "camel.component.docling.batch-size",
+      "type": "java.lang.Integer",
+      "description": "Number of documents to submit per sub-batch. Documents are partitioned into sub-batches of this size and each sub-batch is processed before starting the next one. Within each sub-batch, up to batchParallelism threads are used concurrently. This controls memory usage and back-pressure when processing large document sets.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 10
+    },
+    {
+      "name": "camel.component.docling.batch-timeout",
+      "type": "java.lang.Long",
+      "description": "Maximum time to wait for batch completion in milliseconds",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 300000
+    },
+    {
+      "name": "camel.component.docling.chunking-include-raw-text",
+      "type": "java.lang.Boolean",
+      "description": "Include raw text in chunk output",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.chunking-max-tokens",
+      "type": "java.lang.Integer",
+      "description": "Maximum number of tokens per chunk for hybrid chunking",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.chunking-merge-peers",
+      "type": "java.lang.Boolean",
+      "description": "Whether to merge peer chunks in hybrid chunking",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.docling.chunking-tokenizer",
+      "type": "java.lang.String",
+      "description": "Tokenizer model for hybrid chunking (e.g. sentence-transformers\/all-MiniLM-L6-v2)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.chunking-use-markdown-tables",
+      "type": "java.lang.Boolean",
+      "description": "Use markdown format for tables in chunk output",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.configuration",
+      "type": "org.apache.camel.component.docling.DoclingConfiguration",
+      "description": "The configuration for the Docling Endpoint. The option is a org.apache.camel.component.docling.DoclingConfiguration type.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.content-in-body",
+      "type": "java.lang.Boolean",
+      "description": "Include the content of the output file in the exchange body and delete the output file",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.customizer.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.apache.camel.spring.boot.ComponentConfigurationPropertiesCommon$CustomizerProperties"
+    },
+    {
+      "name": "camel.component.docling.do-code-enrichment",
+      "type": "java.lang.Boolean",
+      "description": "Enable code enrichment in document processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.do-formula-enrichment",
+      "type": "java.lang.Boolean",
+      "description": "Enable formula enrichment in document processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.do-ocr",
+      "type": "java.lang.Boolean",
+      "description": "Enable OCR processing in docling-serve API mode. When not set, the server uses its own defaults. Set enableOCR to false to explicitly disable OCR.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.do-picture-classification",
+      "type": "java.lang.Boolean",
+      "description": "Enable picture classification in document processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.do-picture-description",
+      "type": "java.lang.Boolean",
+      "description": "Enable picture description generation in document processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.do-table-structure",
+      "type": "java.lang.Boolean",
+      "description": "Enable table structure recognition",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.docling-command",
+      "type": "java.lang.String",
+      "description": "Path to Docling Python executable or command",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.docling-serve-url",
+      "type": "java.lang.String",
+      "description": "Docling-serve API URL (e.g., http:\/\/localhost:5001)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "http:\/\/localhost:5001"
+    },
+    {
+      "name": "camel.component.docling.document-timeout",
+      "type": "java.lang.Long",
+      "description": "Document processing timeout in seconds",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.enable-o-c-r",
+      "type": "java.lang.Boolean",
+      "description": "Enable OCR processing for scanned documents",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.docling.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable auto configuration of the docling component. This is enabled by default.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.force-ocr",
+      "type": "java.lang.Boolean",
+      "description": "Force OCR processing even for digital documents",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.image-export-mode",
+      "type": "java.lang.String",
+      "description": "Image export mode for referenced images",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.images-scale",
+      "type": "java.lang.Double",
+      "description": "Scale factor for exported images",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.include-images",
+      "type": "java.lang.Boolean",
+      "description": "Include images in the conversion output",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.include-layout-info",
+      "type": "java.lang.Boolean",
+      "description": "Show layout information with bounding boxes",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.include-metadata-in-headers",
+      "type": "java.lang.Boolean",
+      "description": "Include metadata in message headers when extracting metadata",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": true
+    },
+    {
+      "name": "camel.component.docling.include-raw-metadata",
+      "type": "java.lang.Boolean",
+      "description": "Include raw metadata as returned by the parser",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.input-base-directory",
+      "type": "java.lang.String",
+      "description": "When set, every local input file path must resolve inside this directory once normalized. Applies to the CamelDoclingInputFilePath header, to file path message bodies, and to the paths used by the batch operations. When empty, no directory restriction is applied.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.lazy-start-producer",
+      "type": "java.lang.Boolean",
+      "description": "Whether the producer should be started lazy (on the first message). By starting lazy you can use this to allow CamelContext and routes to startup in situations where a producer may otherwise fail during starting and cause the route to fail being started. By deferring this startup to be lazy then the startup failure can be handled during routing messages via Camel's routing error handlers. Beware that when the first message is processed then creating and starting the producer may take a little time and prolong the total processing time of the processing.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.max-file-size",
+      "type": "java.lang.Long",
+      "description": "Maximum file size in bytes for processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 52428800
+    },
+    {
+      "name": "camel.component.docling.md-page-break-placeholder",
+      "type": "java.lang.String",
+      "description": "Placeholder string for page breaks in markdown output",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.oauth-profile",
+      "type": "java.lang.String",
+      "description": "OAuth profile name for obtaining an access token via the OAuth 2.0 Client Credentials grant. When set, the token is acquired from the configured identity provider and used as authenticationToken. Requires camel-oauth on the classpath.",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.ocr-engine",
+      "type": "java.lang.String",
+      "description": "OCR engine to use",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.ocr-language",
+      "type": "java.lang.String",
+      "description": "Language code for OCR processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "en"
+    },
+    {
+      "name": "camel.component.docling.operation",
+      "type": "org.apache.camel.component.docling.DoclingOperations",
+      "description": "The operation to perform",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "convert-to-markdown"
+    },
+    {
+      "name": "camel.component.docling.output-format",
+      "type": "java.lang.String",
+      "description": "Output format for document conversion",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": "markdown"
+    },
+    {
+      "name": "camel.component.docling.pdf-backend",
+      "type": "java.lang.String",
+      "description": "PDF parsing backend",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.pipeline",
+      "type": "java.lang.String",
+      "description": "Processing pipeline to use",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.process-timeout",
+      "type": "java.lang.Long",
+      "description": "Timeout for Docling process execution in milliseconds",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": 30000
+    },
+    {
+      "name": "camel.component.docling.split-batch-results",
+      "type": "java.lang.Boolean",
+      "description": "Split batch results into individual exchanges (one per document) instead of single BatchProcessingResults",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.table-cell-matching",
+      "type": "java.lang.Boolean",
+      "description": "Enable table cell matching post-processing",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.table-mode",
+      "type": "java.lang.String",
+      "description": "Table structure recognition mode",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    },
+    {
+      "name": "camel.component.docling.use-async-mode",
+      "type": "java.lang.Boolean",
+      "description": "Use asynchronous conversion mode (docling-serve API only)",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.use-docling-serve",
+      "type": "java.lang.Boolean",
+      "description": "Use docling-serve API instead of CLI command",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration",
+      "defaultValue": false
+    },
+    {
+      "name": "camel.component.docling.working-directory",
+      "type": "java.lang.String",
+      "description": "Working directory for Docling execution",
+      "sourceType": "org.apache.camel.component.docling.springboot.DoclingComponentConfiguration"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}
