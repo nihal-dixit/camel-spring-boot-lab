@@ -335,7 +335,7 @@
       <dependency>
         <groupId>org.apache.camel.maven</groupId>
         <artifactId>camel-debezium-maven-plugin</artifactId>
-        <version>4.23.0-SNAPSHOT</version>
+        <version>4.23.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel.maven</groupId>
